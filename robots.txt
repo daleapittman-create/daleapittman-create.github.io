@@ -1,0 +1,7 @@
+# dalepittman.com — crawler preferences
+# Meta-ExternalAgent is Meta's AI-training data crawler.
+# Blocking it opts this site's content out of Meta AI training collection
+# while leaving Facebook/Instagram link previews (facebookexternalhit)
+# and regular search indexing untouched.
+User-agent: Meta-ExternalAgent
+Disallow: /
