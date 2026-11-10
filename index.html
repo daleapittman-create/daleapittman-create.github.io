@@ -154,6 +154,11 @@
   footer a{color:var(--cream-dim);text-decoration:none}
   footer a:hover{color:var(--cream)}
   .foot-links{display:flex;gap:22px;flex-wrap:wrap}
+
+/* Quiet shared navigation and readable mobile service entry points. */
+@media(max-width:760px){.nav{height:auto;min-height:64px;flex-wrap:wrap;padding:14px 0;gap:12px}.nav-links{gap:16px;flex-wrap:wrap}.nav-links a[href="/portfolio/"],.nav-links a[href="/services/"]{display:inline-block}.nav-cta{padding:6px 12px}.hero{padding-top:190px}.price{font-size:24px}.price small{display:block}.hero-meta{gap:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation:none!important}}
+a:focus-visible,button:focus-visible{outline:2px solid #e8a33d;outline-offset:5px}
 </style>
 </head>
 <body>
@@ -165,7 +170,7 @@
       <a href="#upgrade">The AI Upgrade</a>
       <a href="#systems">Systems</a>
       <a href="#products">Products</a>
-      <a href="#work">Work</a>
+      <a href="/portfolio/">Portfolio</a><a href="/services/">Services & pricing</a>
       <a class="nav-cta" href="mailto:daleapittman@gmail.com?subject=Start%20a%20conversation%20%E2%80%94%20dalepittman.com">Start a conversation</a>
     </nav>
   </div>
@@ -181,7 +186,7 @@
     <p class="hero-p">You don't need another tool to learn. You need the tools you already trust, wired together and run for you — one clear view of the day, the money, and the next move. That's what I build.</p>
     <div class="cta-row">
       <a class="btn btn-solid" href="mailto:daleapittman@gmail.com?subject=Start%20a%20conversation%20%E2%80%94%20dalepittman.com">Start a conversation</a>
-      <a class="btn btn-ghost" href="#products">Products &amp; prices</a>
+      <a class="btn btn-ghost" href="/services/">Services &amp; prices</a>
     </div>
     <div class="hero-meta">
       <span class="mono">Now booking — a few clients at a time, by design</span>
@@ -216,10 +221,10 @@
         <p class="mono amber">Flagship · Done for you</p>
         <span class="chip live">Booking now</span>
       </div>
-      <h2>The AI Upgrade</h2>
+      <h2>The AI Upgrade</h2><p class="price">Discovery $300–$600 <small>· focused pilots $4,000–$6,000 · connected systems quoted after discovery</small></p>
       <p>Your business, given an operating system. I build you the same kind of setup I run my own studio on — a daily headquarters, an assistant layer that drafts, files, and follows up, and a short daily card that tells you the one thing to do next. You keep running your business. The system keeps everything else from falling through the floor.</p>
       <div class="flag-grid">
-        <div class="mini"><span class="mono">Daily HQ</span><b>One screen, every morning</b><p>Today and tomorrow, cash position, pipeline, and open loops — current, not reconstructed.</p></div>
+        <div class="mini"><span class="mono">Daily HQ</span><b>One screen, every morning</b><p>Today and tomorrow, cash position, pipeline, and open loops — with sources and last-updated dates in view.</p></div>
         <div class="mini"><span class="mono">Daily cards</span><b>The day, pre-sorted</b><p>A short card each morning: what matters, what's waiting on you, what can wait.</p></div>
         <div class="mini"><span class="mono">Follow-through</span><b>Nothing dropped</b><p>Drafts prepared, follow-ups tracked, receipts filed. You approve; the system does the carrying.</p></div>
       </div>
@@ -281,19 +286,19 @@
       <article class="card reveal">
         <p class="mono amber">For showing up consistently</p>
         <h3>Social Studio Starter Kit</h3>
-        <p>A downloadable design kit for social posts that look like a studio made them: 7 layouts, 4 sizes, PNG/SVG export, and a local editor that runs in your browser. No subscription, no account connections — your files, your machine.</p>
-        <p class="price">$49 <small>one time · instant download</small></p>
-        <a class="btn btn-solid" href="https://dalepittman.gumroad.com/l/social-studio-starter-kit">Get the kit</a>
+        <p>A downloadable design kit for social posts that look like a studio made them: 7 browser layouts, 4 sizes and PNG/SVG export, plus layered PSD masters, SVG/PNG templates and three ambient MP4s. No subscription, no account connections — your files, your machine.</p>
+        <p class="price">$49 <small>one time · browser editor + design bundle</small></p>
+        <a class="btn btn-solid" href="https://dalepittman.gumroad.com/l/social-studio-starter-kit">Get the complete kit</a>
       </article>
       <article class="card reveal">
         <p class="mono amber">For everything else moving</p>
         <h3>Design &amp; Motion</h3>
-        <p>Product stories, launch films, event visuals, brand systems — the design and motion work behind the proof below. Project-based, scoped before we start, no hourly meter running.</p>
-        <p class="price">By project <small>scoped up front</small></p>
-        <a class="btn btn-solid" href="mailto:daleapittman@gmail.com?subject=Design%20%26%20motion%20project">Book Dale</a>
+        <p>Product stories, launch films, event visuals, brand systems — the design and motion work behind the proof below. Project-based, scoped before we start, deliverables and review rounds agreed up front.</p>
+        <p class="price">Design from $350 <small>· motion from $750</small></p>
+        <a class="btn btn-solid" href="/services/">Explore services</a>
       </article>
     </div>
-    <p class="reveal" style="margin-top:28px;color:var(--cream-faint);font-size:15px">And free, because good work should travel: the <b style="color:var(--cream)">Free Library</b> — my own artwork as free wallpapers, released as pieces are finished. New drops land first on <a href="https://www.instagram.com/daleapittman" style="color:var(--amber)">@daleapittman</a>.</p>
+    <p class="reveal" style="margin-top:28px;color:var(--cream-faint);font-size:15px"><a href="/products/">Full digital collection: Starter Kit $49 · Motion Planning $19 · Ambient Backgrounds $9 ↗</a><br><br>And free, because good work should travel: the <b style="color:var(--cream)">Free Library</b> — my own artwork as free wallpapers, released as pieces are finished. New drops land first on <a href="https://www.instagram.com/daleapittman" style="color:var(--amber)">@daleapittman</a>.</p>
   </div>
 </section>
 
@@ -302,7 +307,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <p class="mono">Proof, not promises</p>
-      <h2>The work behind the pitch.</h2>
+      <h2>The work behind the pitch.</h2><p>Motion, spatial graphics and creative tools — with the work, process and credits in view.</p><a class="btn btn-ghost" href="/portfolio/">Explore the portfolio ↗</a>
     </div>
     <div class="proof-grid">
       <article class="proof reveal">
@@ -336,12 +341,12 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <p class="mono">How it works</p>
-      <h2>Three steps. Then it just runs.</h2>
+      <h2>Three steps. Then we put it to work.</h2>
     </div>
     <div class="steps">
       <div class="step reveal"><p class="mono">Step 01 — Look</p><h3>We map how you run things</h3><p>A working conversation about your day, your tools, and where things fall apart. No audit theater — we find the friction that costs you.</p></div>
       <div class="step reveal"><p class="mono">Step 02 — Build</p><h3>I build your system</h3><p>Your HQ, your daily cards, your follow-through — assembled on tools you control, in your name, documented as we go.</p></div>
-      <div class="step reveal"><p class="mono">Step 03 — Run</p><h3>You open one screen</h3><p>Every morning: where things stand and the one next action. The system carries the rest. A few clients at a time, by design — so yours gets built properly.</p></div>
+      <div class="step reveal"><p class="mono">Step 03 — Run</p><h3>You open one screen</h3><p>Every morning: where things stand and the one next action. Connections and automation are agreed, tested and documented for your workflow. A few clients at a time, by design — so yours gets built properly.</p></div>
     </div>
   </div>
 </section>
@@ -379,7 +384,7 @@
   <div class="wrap foot-in">
     <span>© <span id="yr">2026</span> Dale Pittman · Dale Pittman Designs · Denver, Colorado</span>
     <span class="foot-links">
-      <a href="https://shop.dalepittman.com">Shop</a>
+      <a href="/products/">Shop</a>
       <a href="https://www.linkedin.com/in/dalepittmandesign">LinkedIn</a>
       <a href="https://www.instagram.com/daleapittman">Instagram</a>
       <a href="mailto:daleapittman@gmail.com">Email</a>
