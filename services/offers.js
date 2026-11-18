@@ -9,9 +9,9 @@
 
   const offers = {
     campaign: {
-      title: 'Holiday / New Year Campaign Kit',
-      terms: 'We’ll confirm the kit price, payment schedule, and start date together.',
-      request: 'I’m interested in the Holiday / New Year Campaign Kit: one visual direction, three designs in three agreed sizes each (nine static exports), and two consolidated revision rounds.'
+      title: 'Holiday / New Year Campaign Kit — $650',
+      terms: 'The full $650 is due upfront once we agree on the brief and start date.',
+      request: 'I’m interested in the $650 Holiday / New Year Campaign Kit, paid in full upfront after we agree on the scope and start date. I’d like one visual direction, three designs in three agreed sizes each (nine static exports), and two consolidated revision rounds.'
     },
     monthly: {
       title: 'Monthly Content Partner — $500 introductory month',
@@ -46,7 +46,7 @@
   // Do not populate a monthly URL with a checkout that excludes ongoing services.
   try {
     const config = JSON.parse(document.getElementById('service-payment-config')?.textContent || '{}');
-    for (const [offer, key] of [['campaign', 'campaignDepositUrl'], ['monthly', 'partnerIntroMonthUrl']]) {
+    for (const [offer, key] of [['campaign', 'campaignKitUrl'], ['monthly', 'partnerIntroMonthUrl']]) {
       if (typeof config[key] !== 'string' || !config[key].trim()) continue;
       const url = new URL(config[key]);
       if (url.protocol !== 'https:') continue;
