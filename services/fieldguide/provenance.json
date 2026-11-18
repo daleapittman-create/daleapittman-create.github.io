@@ -1,0 +1,25 @@
+{
+  "source": "Fieldguide product demonstration v0.3, November 5, 2026",
+  "purpose": "Services-local demonstration derivative; no new commercial offer",
+  "preserved_source_sha256": {
+    "Fieldguide-Demo.html": "cb5a46e50eb611fb89bf8b512b07ba8d180df0ded53ee489afbde8231cf6b3b6",
+    "site/app.js": "e4135a6fb112565d1821b5b028f6ae0c0d229b49f868a1c21aeaf201f89de800",
+    "site/core.js": "c3cf0c97287460786eef2116895551bd01656b97586f7fce3ffe17fa2a4b3b09",
+    "site/index.html": "09f3047fdc45be76546f5a7539e41ab6fbf60320dc987bab8213437e33480581",
+    "site/seed.js": "d4553fbab202d49492af8322ef21ea4e8ec123e3aef920522ca5517746659a08",
+    "site/styles.css": "f0b4e85bd00d75a14a8ae8e57e72a9a16b1a38d4ec0631c7fa8e5846be820ba8",
+    "proofs/fieldguide-screen-landscape.png": "187971d1422e1a296eba0559ddabbc81005644181c7c5e6da969be285cc489c9",
+    "proofs/fieldguide-screen-portrait.png": "fa1ba167d6ff707e18bdf5f367ad7f673cc109a54525b8f68484423309e847d6"
+  },
+  "unchanged_image_copies": {
+    "fieldguide-screen-landscape.png": "187971d1422e1a296eba0559ddabbc81005644181c7c5e6da969be285cc489c9",
+    "fieldguide-screen-portrait.png": "fa1ba167d6ff707e18bdf5f367ad7f673cc109a54525b8f68484423309e847d6"
+  },
+  "changes": [
+    "Removed the earlier pilot, design-option, inquiry, and proposed-validation sales presentation.",
+    "Added demonstration context and return links to the Campaign Kit.",
+    "Retained explore, local plan, operator editing, itinerary, JSON and four-format PNG proof behavior.",
+    "Changed only validation wording and browser-storage key in JavaScript; other feature behavior remains the original implementation.",
+    "All venues, merchants, events and artwork content remain fictional. No Stanley assets or client-adoption claims."
+  ]
+}

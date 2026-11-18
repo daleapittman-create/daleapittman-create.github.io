@@ -1,0 +1,62 @@
+{
+  "version": "v01-2026-11-17",
+  "captured_date": "2026-11-17",
+  "source_repository": "https://github.com/daleapittman-create/daleapittman-create.github.io",
+  "source_branch": "main",
+  "base_git_sha": "c12a9c21899a351fcbaf8641914c86b26c2f404d",
+  "canonical_services_url": "https://dalepittman.com/services/",
+  "hosting_identity": {
+    "provider": "GitHub Pages",
+    "custom_domain": "dalepittman.com",
+    "deployment_id": "Not exposed by the source checkout; no new deployment performed for this archive."
+  },
+  "original_services_sha256": "b956d3f795039e59e5fb3a7a96e9dabdf65e5dfff6af264f651a34ce781446b2",
+  "original_files": [
+    {
+      "path": "services/index.html",
+      "bytes": 13680,
+      "sha256": "b956d3f795039e59e5fb3a7a96e9dabdf65e5dfff6af264f651a34ce781446b2"
+    },
+    {
+      "path": "portfolio/styles.css",
+      "bytes": 33431,
+      "sha256": "f83dfa51ccd271f8ab8df5b88bf780f1098fa313077ff4630cec2f78f534e4a6"
+    },
+    {
+      "path": "portfolio/app.js",
+      "bytes": 7366,
+      "sha256": "f670cd9a8d738ceb124976291483a829455d2349f1d0aa407eb67d7420e8fa20"
+    },
+    {
+      "path": "portfolio/assets/favicon.svg",
+      "bytes": 324,
+      "sha256": "600af0207c3cff9466dc70b3dc3a8ea06d035f864b7a3938aa2f2a42e15e6667"
+    },
+    {
+      "path": "portfolio/assets/Manrope.ttf",
+      "bytes": 164700,
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6"
+    },
+    {
+      "path": "portfolio/assets/SpaceGrotesk.ttf",
+      "bytes": 136676,
+      "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72"
+    },
+    {
+      "path": "portfolio/assets/Manrope-OFL.txt",
+      "bytes": 4387,
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+    },
+    {
+      "path": "portfolio/assets/SpaceGrotesk-OFL.txt",
+      "bytes": 4495,
+      "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72"
+    },
+    {
+      "path": "CNAME",
+      "bytes": 15,
+      "sha256": "977a584e8285742eece03e49b1be473bc97afd65f5c9fa873c624d8b4c4eff76"
+    }
+  ],
+  "archive_viewer_note": "The viewer is labeled and noindex. Original page bytes and dependencies are unchanged inside the source ZIP. Historical prices are not current offers."
+}
