@@ -41,22 +41,6 @@
   });
   offerSelect.addEventListener('change', updateOffer);
 
-  // Service payment URLs are deliberately null until independently verified.
-  // These are separate from the $49/$19/$9 self-serve Gumroad downloads.
-  // Do not populate a monthly URL with a checkout that excludes ongoing services.
-  try {
-    const config = JSON.parse(document.getElementById('service-payment-config')?.textContent || '{}');
-    for (const [offer, key] of [['campaign', 'campaignKitUrl'], ['monthly', 'partnerIntroMonthUrl']]) {
-      if (typeof config[key] !== 'string' || !config[key].trim()) continue;
-      const url = new URL(config[key]);
-      if (url.protocol !== 'https:') continue;
-      const link = document.querySelector(`[data-payment-link="${offer}"]`);
-      if (link) { link.href = url.href; link.hidden = false; }
-    }
-  } catch {
-    // Intake remains functional when payment configuration is absent or invalid.
-  }
-
   form.addEventListener('submit', event => {
     event.preventDefault();
     if (!form.reportValidity()) return;
