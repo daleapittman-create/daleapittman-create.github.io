@@ -177,3 +177,58 @@ html[data-motion=off] .services-page .service-button:hover,html[data-motion=off]
 
 /* Monthly intake: a policy, not a live remaining-slot counter. */
 .service-availability{display:inline-flex;align-items:center;gap:10px;margin:20px 0 0;padding:10px 13px;border:1px solid #f6b07d55;border-radius:5px;background:#251d18;color:#f7bf94;font-size:14px;font-weight:600;line-height:1.5;box-shadow:0 1px 0 #ffffff0a inset,0 2px 0 #050709}.service-availability>span{font-size:8px;color:#f5ad76}@media(max-width:600px){.service-availability{font-size:13px;margin-top:18px;padding:9px 11px}}
+
+/* Offer comparison and the two views of Dale's Social Studio example. */
+.services-page .opening-copy .service-availability {
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #ffbd90;
+}
+.opening-actions .service-text-link { justify-self: start; }
+.services-page .studio-preview {
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--service-line);
+  border-radius: 7px;
+  background: #151d26;
+}
+.studio-frame { aspect-ratio: 1.5; background: #eeeae1; }
+.studio-frame img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.studio-frame img[hidden], .studio-switch[hidden] { display: none; }
+.studio-preview figcaption {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 6px 16px; padding: 8px 16px; color: #eeeae1; font-size: 14px;
+}
+.studio-switch { display: inline-flex; gap: 3px; }
+.studio-switch button {
+  padding: 7px 10px; min-height: 44px; font: inherit; font-size: 12px;
+  background: transparent; color: #bac5d0; border: 0; cursor: pointer;
+}
+.studio-switch button[aria-pressed="true"] { color: #ffd3b2; text-decoration: underline; text-underline-offset: 5px; }
+.services-page .services-opening { padding-bottom: clamp(25px, 4vw, 50px); }
+.services-page .offer-card { scroll-margin-top: 100px; }
+.offer-card .offer-summary { min-height: 0; font-size: 15px; line-height: 1.6; }
+.service-rates { margin: 22px 0 12px; }
+.service-rates > div { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-top: 1px solid var(--service-line); padding: 11px 0; }
+.service-rates dt { max-width: 22ch; color: #c8d2d8; font-size: 14px; line-height: 1.5; }
+.service-rates dd { margin: 0; font-weight: 650; font-size: clamp(21px, 2.1vw, 30px); line-height: 1.2; color: #ffceaa; white-space: nowrap; letter-spacing: -.035em; }
+.service-rates dd span { font-size: 13px; letter-spacing: 0; }
+.service-scope { color: #bec8cf; font-size: 14px; line-height: 1.65; }
+.kit-example { align-self: flex-start; }
+.offer-action-area { padding-top: 21px; }
+.service-pay { margin-top: 10px; font-size: 13px; color: #c7cfd6; }
+.service-pay summary { cursor: pointer; padding: 12px 0; min-height: 44px; color: #e5c5b0; }
+.service-pay p { line-height: 1.6; margin: 2px 0 7px; }
+.service-pay > div { display: flex; flex-wrap: wrap; gap: 0 18px; }
+.service-pay a { display: inline-flex; align-items: center; min-height: 44px; color: #ffd3b2; text-decoration: underline; text-underline-offset: 3px; }
+.service-start { position: relative; }
+@media (max-width: 360px) {
+  .service-rates > div { flex-wrap: wrap; gap: 4px 10px; }
+  .studio-preview figcaption { padding-inline: 10px; }
+}
+@media print { .studio-switch { display: none; } }

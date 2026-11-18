@@ -9,19 +9,19 @@
 
   const offers = {
     campaign: {
-      title: 'Holiday / New Year Campaign Kit — $650',
-      terms: 'The full $650 is due upfront once we agree on the brief and start date.',
-      request: 'I’m interested in the $650 Holiday / New Year Campaign Kit, paid in full upfront after we agree on the scope and start date. I’d like one visual direction, three designs in three agreed sizes each (nine static exports), and two consolidated revision rounds.'
+      title: 'Holiday & New Year Campaign Kit — $650',
+      terms: 'The $650 kit is paid upfront after we agree on scope and start date.',
+      request: 'I’d like to book the $650 campaign kit.'
     },
     monthly: {
-      title: 'Monthly Content Partner — $500 introductory month',
-      terms: 'Introductory month: $500 upfront for up to 10 total service hours, including setup and revisions. Continuing at $1,000/month requires explicit agreement; no automatic price increase.',
-      request: 'I’m interested in the $500 introductory month of Monthly Content Partner support, with up to 10 total service hours including setup, production, and revisions. I understand any continuation at $1,000/month would require a separate explicit agreement.'
+      title: 'Social Media and Ad Support — Discovery',
+      terms: '$500 discovery deposit. Ongoing support is $1,000/month by agreement.',
+      request: 'I’m interested in discovery for Social Media and Ad Support. Please confirm the scope and start date for the $500 deposit.'
     },
     question: {
-      title: 'Choosing a creative project starting point',
-      terms: 'We’ll choose a suitable starting point and agree the scope, timing, and payment arrangements before work begins.',
-      request: 'I’d like help choosing the right starting point for my project.'
+      title: 'Creative project inquiry',
+      terms: 'I’ll confirm scope and timing by email.',
+      request: 'I’d like to discuss a creative project.'
     }
   };
 
@@ -49,17 +49,32 @@
     const name = String(fields.get('name') || '').trim();
     const email = String(fields.get('email') || '').trim();
     const brief = String(fields.get('brief') || '').trim();
-    const deadline = String(fields.get('deadline') || '').trim();
     const subject = `${offer.title} — ${name}`;
-    const body = `Hi Dale,\n\n${offer.request}\n\nWHAT I’M WORKING ON\n${brief}\n\nDEADLINE / IDEAL START\n${deadline || 'To discuss'}\n\nPlease let me know the confirmed scope, availability, and next steps before payment.\n\n${name}\n${email}`;
+    const body = `Hi Dale,\n\n${offer.request}\n\n${brief}\n\nPlease let me know the confirmed scope, availability, and next steps before payment.\n\n${name}\n${email}`;
     const mailto = `mailto:daleapittman@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     result.replaceChildren(document.createTextNode('Your request is ready. Review and send it in your email app. If the app didn’t open, '));
     const fallback = document.createElement('a');
     fallback.href = mailto;
     fallback.textContent = 'open the prepared email';
-    result.append(fallback, document.createTextNode('. No request has been sent by this page.'));
+    result.append(fallback, document.createTextNode('.'));
     window.location.href = mailto;
   });
   updateOffer();
+})();
+
+(() => {
+  const controls = document.querySelector('.studio-switch');
+  if (!controls) return;
+  const buttons = [...controls.querySelectorAll('[data-studio-view]')];
+  controls.hidden = false;
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      for (const view of buttons) {
+        const selected = view === button;
+        view.setAttribute('aria-pressed', String(selected));
+        document.getElementById(view.getAttribute('aria-controls')).hidden = !selected;
+      }
+    });
+  }
 })();
