@@ -1,0 +1,17 @@
+/* Hospitality slideshow: dark shell, recessed stage, and raised controls. */
+.service-hero-reel{margin:0;min-width:0;transform:none;--reel-ink:#f0ebe3;--reel-muted:#c8d0d6}
+.service-hero-reel .proof-window-bar{background:linear-gradient(180deg,#26323d,#16212b);color:var(--reel-ink);font-size:10px;letter-spacing:.1em}
+.service-hero-reel [hidden]{display:none!important}
+.service-hero-stage{position:relative;aspect-ratio:16/9;background:#10161b;box-shadow:inset 0 1px 4px #000b;overflow:hidden;isolation:isolate}
+.service-hero-stage .service-hero-image{width:100%;height:100%;object-fit:cover;background:#10161b;display:block}
+.service-hero-operator .service-hero-image{object-position:50% 53%}.service-hero-artwork .service-hero-image{object-fit:contain}
+.service-hero-slide{margin:0}
+.service-hero-slide p{margin:0;padding:.8rem 1rem .7rem;color:var(--reel-ink);line-height:1.45;font-size:13px}
+.service-hero-slide p span{display:block;color:var(--reel-muted);font-size:11px;margin-top:3px}
+.service-hero-controls{border-top:1px solid #b0c4d039;padding:.45rem .7rem;display:flex;align-items:center;justify-content:space-between;gap:.6rem;background:#121b24;border-radius:0 0 6px 6px}
+.service-hero-controls button{width:44px;height:44px;border:1px solid #8e9fb279;border-top-color:#b4c6d899;flex:none;border-radius:5px;display:grid;place-content:center;color:var(--reel-ink);background:#213140;box-shadow:0 2px 0 #070c12;font:inherit;font-size:22px;cursor:pointer}
+.service-hero-controls button:hover{background:#334758}
+.service-hero-controls button:focus-visible{outline:2px solid #ffc49d;outline-offset:3px}
+.service-hero-controls span[role=status]{text-align:center;color:var(--reel-muted);font-size:11px;line-height:1.35}
+@media(max-width:540px){.service-hero-reel .proof-window-bar{font-size:8px}.service-hero-slide p{font-size:12px;padding-inline:.7rem}.service-hero-slide p span{font-size:10px}}
+@media(forced-colors:active){.service-hero-reel .proof-window-bar,.service-hero-controls,.service-hero-controls button{background:Canvas;color:CanvasText;border-color:CanvasText}.service-hero-controls button:focus-visible{outline-color:Highlight}}
