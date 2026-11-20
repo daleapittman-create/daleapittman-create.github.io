@@ -1,0 +1,36 @@
+.index-cover .cover-art {
+  filter: grayscale(1);
+}
+.montage-toggle {
+  position: absolute;
+  z-index: 2;
+  top: clamp(1.25rem, 3vw, 3rem);
+  right: clamp(1.25rem, 3vw, 3rem);
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  min-height: 44px;
+  padding: .55rem .9rem;
+  color: #eee;
+  background: #111e;
+  border: 1px solid #777;
+  border-radius: 0;
+  font: 500 .875rem/1.2 Space, Arial, sans-serif;
+  cursor: pointer;
+}
+.montage-toggle[hidden] { display: none; }
+.montage-toggle:hover { background: #282828; }
+.montage-icon {
+  width: .65rem;
+  height: .75rem;
+  border-inline: 3px solid currentColor;
+}
+.montage-toggle[data-paused] .montage-icon {
+  width: .65rem;
+  border: 0;
+  background: currentColor;
+  clip-path: polygon(8% 0, 100% 50%, 8% 100%);
+}
+@media (max-width: 600px) {
+  .montage-toggle { top: .7rem; left: .75rem; right: auto; }
+}
