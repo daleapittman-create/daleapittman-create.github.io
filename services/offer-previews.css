@@ -1,0 +1,36 @@
+/* Offer imagery: recessed artwork, protective shade, then the offer and actions. */
+.offer-card .offer-image-alt { opacity:0; }
+.offer-card .offer-image-main, .offer-card .offer-image-alt { transition:opacity .38s ease; }
+.offer-card .offer-image-alt { pointer-events:none; }
+.offer-card.offer-holiday>img { transition:opacity .38s ease,transform .7s ease; }
+.offer-holiday>img.offer-image-alt { object-position:55% 38%; }
+.offer-monthly {
+ background:radial-gradient(ellipse at 32% 10%,#36595a 0%,#19383e 47%,#11282e 100%);
+ border-top:1px solid #577272;
+ border-bottom:2px solid #091a1f;
+}
+.offer-monthly .offer-shade { z-index:-2; }
+.social-preview {
+ position:absolute; z-index:-1; top:85px; left:6%; right:6%; height:clamp(150px,18vw,238px);
+ isolation:isolate; border:1px solid #dfe8d334; border-radius:5px; overflow:hidden;
+ background:#13292e; box-shadow:inset 0 1px 5px #08161bc9,0 8px 14px #061920aa;
+}
+.social-preview img { width:100%; height:100%; object-fit:contain; display:block; }
+.social-preview .offer-image-alt, .sprint-preview .offer-image-alt { position:absolute; inset:0; }
+.offer-sprint .sprint-preview { position:relative; }
+.sprint-preview .offer-image-alt { height:100% !important; object-fit:contain; }
+.offer-card:focus-within .offer-image-main { opacity:0; }
+.offer-card:focus-within .offer-image-alt { opacity:1; }
+@media(hover:hover) and (pointer:fine){
+ .offer-card:hover .offer-image-main { opacity:0; }
+ .offer-card:hover .offer-image-alt { opacity:1; }
+}
+.compact-offers .social-preview { top:67px; height:clamp(121px,13vw,172px); }
+@media(max-width:700px){
+ .social-preview { top:73px; height:clamp(150px,44vw,226px); }
+ .compact-offers .social-preview { top:65px; height:clamp(124px,34vw,165px); }
+}
+@media(prefers-reduced-motion:reduce){
+ .offer-card .offer-image-main,.offer-card .offer-image-alt,.offer-card.offer-holiday>img { transition:none; }
+ .offer-card:hover>img { transform:none; }
+}
