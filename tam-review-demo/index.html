@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0c131b">
+<meta name="description" content="ZORA TAM Review — see an invented Salesforce-style case export become a traceable support dashboard and executive meeting narrative. Independent pilot by Dale Pittman.">
+<title>ZORA / TAM Review Studio · A synthetic interactive demonstration</title>
+<style>
+:root{--bg:#0c131b;--panel:#17222d;--edge:#30414a;--ink:#ecf3f4;--muted:#9baeb8;--orange:#ff713b;--teal:#70d8c7;--cream:#f6f2e8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--ink);margin:0;font-family:Inter,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}button,input{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1320px;margin:auto;padding:0 34px}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #273440}.logo{font-weight:900;letter-spacing:-.05em;font-size:25px}.logo em{color:var(--orange);font-style:normal}.nav-links{display:flex;gap:24px;align-items:center;font-size:13px;color:var(--muted)}.nav-links a{text-decoration:none}.nav-links a:hover{color:var(--ink)}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:var(--orange);font-size:11px}.hero{display:grid;grid-template-columns:1.22fr .78fr;align-items:end;gap:40px;padding:91px 0 77px}.hero h1{font-size:clamp(52px,6.4vw,96px);line-height:.95;letter-spacing:-.065em;margin:18px 0 26px;max-width:850px}.hero h1 span{color:var(--orange)}.hero p{color:#bdced6;font-size:17px;line-height:1.6;max-width:655px}.hero-right{border-left:1px solid var(--edge);padding-left:30px}.hero-right .step{display:flex;align-items:baseline;gap:15px;padding:15px 0;border-bottom:1px solid var(--edge)}.hero-right .num{font-size:13px;font-weight:800;color:var(--orange);width:28px}.hero-right .slabel{font-size:17px;font-weight:700}.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);color:#121820!important;border:1px solid var(--orange);padding:13px 20px;font-weight:850;font-size:13px;text-decoration:none;border-radius:4px;line-height:1.25}.btn.secondary{color:var(--ink)!important;background:transparent;border:1px solid #4f636e}.btn:hover{filter:brightness(1.1)}.overline{font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.rule{height:1px;background:var(--edge)}.stage{padding:42px 0 70px}.stage-top{display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}.stage-top h2{font-size:clamp(30px,3.8vw,54px);letter-spacing:-.05em;margin:7px 0 5px}.stage-top p{color:var(--muted);margin:0}.status{font-size:12px;border:1px solid #3f595c;border-radius:100px;padding:10px 16px;color:var(--teal);font-weight:700}.controls{margin:28px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap}.filepick{position:relative;display:inline-flex;align-items:center}.filepick input{position:absolute;inset:0;opacity:0;width:100%;cursor:pointer}.hint{font-size:12px;color:var(--muted);max-width:430px;margin-left:auto}.error{color:#ffbcac;margin:4px 0 16px;min-height:18px;font-size:13px}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.metric{background:var(--panel);border:1px solid #2c3c49;padding:23px 22px 21px;min-height:152px}.metric b{font-weight:850;font-size:clamp(38px,4vw,59px);letter-spacing:-.05em;display:block;margin:14px 0 7px}.metric .overline{font-size:11px}.metric small{color:var(--muted);font-size:12px}.metric.risk b{color:var(--orange)}
+.columns{display:grid;grid-template-columns:1.08fr .92fr;gap:10px;margin-top:10px}.panel{background:var(--panel);border:1px solid #2c3c49;padding:28px;min-width:0}.panel h3{margin:4px 0 24px;font-size:24px;letter-spacing:-.03em}.barrow{display:grid;grid-template-columns:minmax(130px,200px) 1fr 40px;align-items:center;gap:12px;margin:15px 0;font-size:13px}.barrow .track{height:13px;background:#273946;border-radius:2px;overflow:hidden}.barrow .fill{height:100%;background:var(--teal);width:0;transition:width .3s}.barrow strong{font-variant-numeric:tabular-nums;text-align:right}.narrative{padding:0;margin:0;list-style:none}.narrative li{padding:14px 0;border-top:1px solid #31424d;font-size:15px;line-height:1.5;color:#d0dde1}.narrative li:first-child{border-top:0}.narrative li:before{content:"↳";color:var(--orange);font-weight:700;margin-right:9px}
+.table-panel{margin-top:10px;background:var(--panel);border:1px solid #2c3c49;padding:28px;overflow:hidden}.table-head{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap}.table-head h3{font-size:25px;letter-spacing:-.03em;margin:0 0 20px}.table-head p{color:var(--muted);font-size:13px;margin:0}.table-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;white-space:nowrap;font-size:13px}th{text-align:left;font-size:10px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;padding:13px 12px;border-bottom:1px solid #53616a}td{border-bottom:1px solid #30404c;padding:15px 12px;color:#d9e4e8}td b{color:var(--orange)}td.wrap-cell{white-space:normal;min-width:220px;line-height:1.35}.tag{display:inline-block;border:1px solid #53616a;color:#dae4e7;padding:4px 8px;border-radius:30px;font-size:11px}.tag.danger{color:#ffc5ae;border-color:#a15d40}
+.story{display:grid;grid-template-columns:1.18fr .82fr;gap:50px;padding:90px 0}.story h2{font-size:clamp(38px,4.5vw,68px);letter-spacing:-.055em;line-height:1.02;margin:20px 0}.story p{font-size:16px;line-height:1.7;color:#acbec8;max-width:640px}.story blockquote{margin:0;padding:28px;border-top:3px solid var(--orange);background:#17232e;font-size:21px;line-height:1.5;letter-spacing:-.02em}.story blockquote small{display:block;font-size:11px;color:var(--muted);margin-top:22px;letter-spacing:.08em}
+.offer{background:var(--cream);color:#16222c;margin:12px 0 65px;padding:45px;display:grid;grid-template-columns:1fr 1fr;gap:50px}.offer .eyebrow{color:#ce5427}.offer h2{font-size:50px;letter-spacing:-.05em;line-height:1.02;margin:16px 0}.offer p{line-height:1.7;color:#43535c}.offer .price{font-size:42px;font-weight:900;letter-spacing:-.045em}.offer ul{line-height:2;padding-left:20px;font-size:15px}.offer .btn{margin-top:14px}.fineprint{font-size:12px!important;color:#61717b!important}
+.footer{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:24px 0 46px;color:var(--muted);font-size:12px}.footer a{color:#dde7e8}
+@media(max-width:840px){.hero,.columns,.story,.offer{grid-template-columns:1fr}.hero{padding:55px 0}.hero-right{border-left:0;padding-left:0}.metrics{grid-template-columns:repeat(2,1fr)}.offer{padding:29px}.story{gap:30px;padding:58px 0}}
+@media(max-width:520px){.wrap{padding:0 18px}.hero h1{font-size:51px}.nav-links a:nth-child(2){display:none}.metrics{grid-template-columns:1fr 1fr}.metric{padding:17px 14px;min-height:135px}.metric b{font-size:39px}.panel,.table-panel{padding:19px}.barrow{grid-template-columns:105px 1fr 20px;gap:8px;font-size:11px}.stage{padding-top:30px}.offer h2{font-size:38px}.footer{flex-direction:column;align-items:flex-start}.hint{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="nav"><a href="/" class="logo" style="text-decoration:none">DALE<span style="color:#78909b"> / </span><em>ZORA</em></a><nav class="nav-links"><a href="#demo">Try the demo</a><a href="#scope">Pilot scope</a><a href="mailto:daleapittman@gmail.com?subject=ZORA%20TAM%20Review%20Pilot">Contact Dale ↗</a></nav></header>
+<main>
+<section class="hero">
+<div><div class="eyebrow">Creative automation / executive storytelling / 01</div><h1>Data becomes<br><span>the decision.</span></h1><p>Support cases arrive in Salesforce. The customer meeting needs a story. ZORA makes the handoff more useful: a case-driven account dashboard, traceable risk narrative, and a repeatable presentation workflow.</p><div class="btns"><a class="btn" href="#demo">Explore the synthetic demo ↓</a><a class="btn secondary" href="sample-cases.csv" download>Download sample CSV ↗</a></div></div>
+<aside class="hero-right" aria-label="Workflow steps"><div class="step"><span class="num">01</span><span class="slabel">EXPORT / CRM OR CSV</span></div><div class="step"><span class="num">02</span><span class="slabel">REVIEW / SUPPORT SIGNALS</span></div><div class="step"><span class="num">03</span><span class="slabel">FRAME / BUSINESS IMPACT</span></div><div class="step"><span class="num">04</span><span class="slabel">PRESENT / ACCOUNT REVIEW</span></div><p class="overline" style="padding-top:14px">No live CRM connection is implied. This page uses entirely invented records.</p></aside>
+</section>
+<div class="rule"></div>
+<section class="stage" id="demo">
+<div class="stage-top"><div><div class="eyebrow">02 / Interactive proof of concept</div><h2>One account. A usable signal.</h2><p id="dataset">Loading fictional CSV…</p></div><div class="status">● SYNTHETIC DATA / BROWSER DEMO</div></div>
+<div class="controls"><a class="btn secondary" href="sample-cases.csv" download>↓ Sample CSV</a><label class="filepick btn secondary" for="upload">↑ Explore a local CSV<input type="file" id="upload" accept=".csv,text/csv" aria-label="Choose a local CSV to parse"></label><button type="button" class="btn secondary" id="reset">↺ Reset sample</button><button type="button" class="btn" id="brief">↓ Download meeting brief</button><span class="hint">For safety, use invented or approved sanitized data only. Local uploads are parsed in this browser; this demo has no data-upload endpoint.</span></div>
+<div id="error" class="error" aria-live="polite"></div>
+<div class="metrics" aria-label="Case summary">
+<div class="metric"><div class="overline">Case records</div><b id="total">—</b><small>Rows in current CSV</small></div>
+<div class="metric"><div class="overline">Currently open</div><b id="open">—</b><small>Open or in progress</small></div>
+<div class="metric risk"><div class="overline">Past listed SLA</div><b id="overdue">—</b><small>As of 22 Nov 2026</small></div>
+<div class="metric risk"><div class="overline">High-priority open</div><b id="high">—</b><small>High or critical tags</small></div>
+</div>
+<div class="columns"><article class="panel"><div class="eyebrow">A / Category mix</div><h3>Where work clusters.</h3><div id="bars" aria-label="Cases by category"></div></article><article class="panel"><div class="eyebrow">B / Working narrative</div><h3>What a TAM should ask.</h3><ul class="narrative" id="narrative"></ul></article></div>
+<section class="table-panel"><div class="table-head"><h3>Traceable support evidence</h3><p>Sorted by due date. A listed SLA is not a verified breach without the governing policy.</p></div><div class="table-scroll"><table><thead><tr><th>Case ID</th><th>Priority</th><th>Category</th><th>Subject</th><th>Status</th><th>Due</th><th>Next action</th></tr></thead><tbody id="casebody"></tbody></table></div></section>
+</section>
+<div class="rule"></div>
+<section class="story"><div><div class="eyebrow">03 / Why this is useful</div><h2>Less slide hunting.<br>More accountable<br>conversation.</h2><p>The source records stay identifiable. A customer-facing status remains a proposed narrative until the account owner approves it. Case closure is not automatically a verified business outcome.</p><p>This example demonstrates the reporting concept. A commercial engagement adds your approved fields, account taxonomy, editable slide template, review cadence, and QA—not an unverified Salesforce API connection.</p></div><aside><blockquote>“What changed, which customer outcome does it affect, and what will we do next?”<small>EXAMPLE ACCOUNT-REVIEW QUESTION · NOT A CUSTOMER QUOTE</small></blockquote></aside></section>
+<section id="scope" class="offer"><div><div class="eyebrow">04 / Private guided pilot</div><h2>One workflow.<br>One clear decision.</h2><p>Start with a controlled manual export, validate the evidence-to-story path, and deliver the next customer-ready review template. No unsupported enterprise integration claims.</p><div class="price">$1,500 <span style="font-size:17px;font-weight:650">pilot</span></div><p class="fineprint">Indicative fixed service fee; exact scope, data permissions, kickoff and payment terms agreed in writing first.</p><a class="btn" href="mailto:daleapittman@gmail.com?subject=ZORA%20TAM%20Review%20Pilot&body=Hi%20Dale%2C%20we%27d%20like%20to%20discuss%20a%20TAM%20review%20pilot.%0AOur%20current%20data%20source%3A%20%0AReview%20frequency%3A%20%0ADesired%20output%3A%20">Ask about a pilot ↗</a></div><div><div class="eyebrow">Bounded delivery / up to four weeks</div><ul><li>One account-review workflow and one agreed CSV source schema</li><li>Field mapping plus evidence-linked KPI and risk summary</li><li>One editable presentation template with notes and questions</li><li>Two scheduled review cycles and one consolidated revision round</li><li>Handoff for up to three TAM users</li></ul><p class="fineprint">Excluded unless separately quoted: Salesforce authentication/API access, production hosting, enterprise security attestations, sensitive-data processing, and ongoing managed reporting.</p></div></section>
+</main>
+<footer class="footer"><span>© 2026 Dale Pittman · Denver · Independent creative technology</span><span>FICTIONAL DEMONSTRATION · NO THIRD-PARTY ENDORSEMENT · <a href="/">Portfolio</a></span></footer>
+</div>
+<script type="text/plain" id="sourceCSV">Case Number,Account Name,Created Date,Closed Date,Status,Priority,Category,Subject,Assigned Team,SLA Due,Customer Impact,Next Action,Last Updated
+SYN-41007,Asterline Systems (fictional),2026-10-13,2026-10-16,Closed,High,Service Accounts,Map unmanaged service identity,Technical Account,2026-10-17,No material impact confirmed,Closed — validate outcome if discussed,2026-10-16
+SYN-41043,Asterline Systems (fictional),2026-10-13,,In Progress,High,Service Accounts,Map unmanaged service identity,Technical Account,2026-10-17,No material impact confirmed,Schedule customer-side verification,2026-11-21
+SYN-41026,Asterline Systems (fictional),2026-10-14,2026-10-25,Closed,Low,Secrets Rotation,Review credential age alert,Platform Support,2026-10-24,Review preparation delay,Closed — validate outcome if discussed,2026-10-25
+SYN-41021,Asterline Systems (fictional),2026-10-15,2026-10-21,Closed,High,User Provisioning,Resolve access request delay,Customer Success,2026-10-19,Adoption visibility gap,Closed — validate outcome if discussed,2026-10-21
+SYN-41032,Asterline Systems (fictional),2026-10-15,2026-10-23,Closed,Medium,Secrets Rotation,Resolve failed rotation job,Engineering,2026-10-22,Operations follow-up,Closed — validate outcome if discussed,2026-10-23
+SYN-41010,Asterline Systems (fictional),2026-10-16,,In Progress,Low,Platform,Address scheduled maintenance impact,Platform Support,2026-10-26,Compliance evidence needed,Schedule customer-side verification,2026-11-18
+SYN-41023,Asterline Systems (fictional),2026-10-17,,Open,Medium,User Provisioning,Resolve access request delay,Technical Account,2026-10-24,Operations follow-up,Schedule customer-side verification,2026-11-21
+SYN-41033,Asterline Systems (fictional),2026-10-17,,In Progress,High,Privileged Access,Confirm admin role scope,Customer Success,2026-10-21,Compliance evidence needed,Validate metric and denominator before presenting,2026-11-19
+SYN-41037,Asterline Systems (fictional),2026-10-18,2026-10-27,Closed,Medium,Secrets Rotation,Resolve failed rotation job,Customer Success,2026-10-25,Compliance evidence needed,Closed — validate outcome if discussed,2026-10-27
+SYN-41020,Asterline Systems (fictional),2026-10-19,2026-10-23,Closed,Low,Secrets Rotation,Verify scheduled rotation,Engineering,2026-10-29,Adoption visibility gap,Closed — validate outcome if discussed,2026-10-23
+SYN-41042,Asterline Systems (fictional),2026-10-19,,Open,Low,Audit Reporting,Check scheduled report delivery,Platform Support,2026-10-29,Operations follow-up,Confirm mitigation and next update date,2026-11-20
+SYN-41047,Asterline Systems (fictional),2026-10-19,2026-10-24,Closed,Low,User Provisioning,Review role assignment,Technical Account,2026-10-29,Operations follow-up,Closed — validate outcome if discussed,2026-10-24
+SYN-41036,Asterline Systems (fictional),2026-10-20,2026-10-25,Closed,High,Audit Reporting,Reconcile audit timestamps,Engineering,2026-10-24,Operational continuity risk,Closed — validate outcome if discussed,2026-10-25
+SYN-41017,Asterline Systems (fictional),2026-10-23,,In Progress,Low,Platform,Investigate console timeout,Customer Success,2026-11-02,Compliance evidence needed,Confirm mitigation and next update date,2026-11-19
+SYN-41002,Asterline Systems (fictional),2026-10-24,,In Progress,High,Secrets Rotation,Review credential age alert,Platform Support,2026-10-28,Operational continuity risk,Review supporting record with account team,2026-11-21
+SYN-41009,Asterline Systems (fictional),2026-10-25,2026-10-31,Closed,Critical,Secrets Rotation,Verify scheduled rotation,Customer Success,2026-10-27,Review preparation delay,Closed — validate outcome if discussed,2026-10-31
+SYN-41005,Asterline Systems (fictional),2026-10-26,2026-10-29,Closed,High,Privileged Access,Review privileged-group policy,Customer Success,2026-10-30,Compliance evidence needed,Closed — validate outcome if discussed,2026-10-29
+SYN-41031,Asterline Systems (fictional),2026-10-26,2026-11-01,Closed,Critical,Service Accounts,Investigate stale service identity,Technical Account,2026-10-28,Compliance evidence needed,Closed — validate outcome if discussed,2026-11-01
+SYN-41003,Asterline Systems (fictional),2026-10-27,,In Progress,High,Privileged Access,Privilege review evidence gap,Technical Account,2026-10-31,Operations follow-up,Schedule customer-side verification,2026-11-20
+SYN-41030,Asterline Systems (fictional),2026-10-27,2026-10-31,Closed,Medium,Audit Reporting,Export review report,Platform Support,2026-11-03,Operational continuity risk,Closed — validate outcome if discussed,2026-10-31
+SYN-41044,Asterline Systems (fictional),2026-10-28,,In Progress,Medium,Secrets Rotation,Investigate delayed rotation,Engineering,2026-11-04,No material impact confirmed,Review supporting record with account team,2026-11-19
+SYN-41046,Asterline Systems (fictional),2026-10-29,2026-11-09,Closed,Medium,Platform,Address scheduled maintenance impact,Platform Support,2026-11-05,Operations follow-up,Closed — validate outcome if discussed,2026-11-09
+SYN-41022,Asterline Systems (fictional),2026-11-01,2026-11-02,Closed,Low,Platform,Review integration configuration,Platform Support,2026-11-11,No material impact confirmed,Closed — validate outcome if discussed,2026-11-02
+SYN-41029,Asterline Systems (fictional),2026-11-01,2026-11-03,Closed,Medium,User Provisioning,Trace offboarding exception,Customer Success,2026-11-08,Compliance evidence needed,Closed — validate outcome if discussed,2026-11-03
+SYN-41001,Asterline Systems (fictional),2026-11-02,,In Progress,Medium,Platform,Review integration configuration,Customer Success,2026-11-09,No material impact confirmed,Confirm mitigation and next update date,2026-11-19
+SYN-41012,Asterline Systems (fictional),2026-11-02,,In Progress,Critical,Audit Reporting,Validate report permissions,Engineering,2026-11-04,Operational continuity risk,Confirm current owner and next milestone,2026-11-21
+SYN-41038,Asterline Systems (fictional),2026-11-02,2026-11-08,Closed,High,Secrets Rotation,Resolve failed rotation job,Platform Support,2026-11-06,Operations follow-up,Closed — validate outcome if discussed,2026-11-08
+SYN-41039,Asterline Systems (fictional),2026-11-02,2026-11-09,Closed,High,Privileged Access,Confirm admin role scope,Technical Account,2026-11-06,Operations follow-up,Closed — validate outcome if discussed,2026-11-09
+SYN-41045,Asterline Systems (fictional),2026-11-02,,Open,High,Service Accounts,Map unmanaged service identity,Customer Success,2026-11-06,Adoption visibility gap,Confirm current owner and next milestone,2026-11-22
+SYN-41018,Asterline Systems (fictional),2026-11-03,2026-11-06,Closed,Critical,Audit Reporting,Export review report,Platform Support,2026-11-05,No material impact confirmed,Closed — validate outcome if discussed,2026-11-06
+SYN-41016,Asterline Systems (fictional),2026-11-06,,Open,Critical,Platform,Address scheduled maintenance impact,Engineering,2026-11-08,Operations follow-up,Confirm current owner and next milestone,2026-11-22
+SYN-41048,Asterline Systems (fictional),2026-11-06,,In Progress,Low,Audit Reporting,Check scheduled report delivery,Engineering,2026-11-16,Operational continuity risk,Schedule customer-side verification,2026-11-21
+SYN-41027,Asterline Systems (fictional),2026-11-07,,Open,Medium,Privileged Access,Validate emergency-access pathway,Technical Account,2026-11-14,Operational continuity risk,Review supporting record with account team,2026-11-18
+SYN-41006,Asterline Systems (fictional),2026-11-10,,In Progress,Low,Audit Reporting,Validate report permissions,Platform Support,2026-11-20,Adoption visibility gap,Confirm current owner and next milestone,2026-11-19
+SYN-41034,Asterline Systems (fictional),2026-11-10,2026-11-19,Closed,Medium,Platform,Review integration configuration,Platform Support,2026-11-17,Compliance evidence needed,Closed — validate outcome if discussed,2026-11-19
+SYN-41025,Asterline Systems (fictional),2026-11-11,2026-11-18,Closed,Critical,Audit Reporting,Export review report,Customer Success,2026-11-13,Operational continuity risk,Closed — validate outcome if discussed,2026-11-18
+SYN-41019,Asterline Systems (fictional),2026-11-12,2026-11-18,Closed,Critical,Service Accounts,Map unmanaged service identity,Technical Account,2026-11-14,Operations follow-up,Closed — validate outcome if discussed,2026-11-18
+SYN-41035,Asterline Systems (fictional),2026-11-12,,Open,High,User Provisioning,Trace offboarding exception,Technical Account,2026-11-16,No material impact confirmed,Schedule customer-side verification,2026-11-22
+SYN-41024,Asterline Systems (fictional),2026-11-13,2026-11-20,Closed,Critical,Audit Reporting,Validate report permissions,Engineering,2026-11-15,Operational continuity risk,Closed — validate outcome if discussed,2026-11-20
+SYN-41041,Asterline Systems (fictional),2026-11-13,2026-11-22,Closed,Low,Platform,Review integration configuration,Customer Success,2026-11-23,Operational continuity risk,Closed — validate outcome if discussed,2026-11-22
+SYN-41004,Asterline Systems (fictional),2026-11-15,,Open,High,Platform,Review integration configuration,Engineering,2026-11-19,Review preparation delay,Confirm mitigation and next update date,2026-11-18
+SYN-41028,Asterline Systems (fictional),2026-11-15,2026-11-18,Closed,Medium,Platform,Review integration configuration,Engineering,2026-11-22,No material impact confirmed,Closed — validate outcome if discussed,2026-11-18
+SYN-41015,Asterline Systems (fictional),2026-11-19,,In Progress,Critical,Privileged Access,Privilege review evidence gap,Technical Account,2026-11-21,Operational continuity risk,Validate metric and denominator before presenting,2026-11-21
+SYN-41008,Asterline Systems (fictional),2026-11-20,,In Progress,Low,Secrets Rotation,Investigate delayed rotation,Engineering,2026-11-30,Adoption visibility gap,Confirm current owner and next milestone,2026-11-18
+SYN-41011,Asterline Systems (fictional),2026-11-20,,In Progress,Medium,User Provisioning,Trace offboarding exception,Technical Account,2026-11-27,No material impact confirmed,Validate metric and denominator before presenting,2026-11-22
+SYN-41013,Asterline Systems (fictional),2026-11-20,,Open,Medium,Privileged Access,Review privileged-group policy,Customer Success,2026-11-27,Operations follow-up,Confirm mitigation and next update date,2026-11-19
+SYN-41014,Asterline Systems (fictional),2026-11-21,,Open,Medium,Secrets Rotation,Investigate delayed rotation,Platform Support,2026-11-28,Review preparation delay,Schedule customer-side verification,2026-11-22
+SYN-41040,Asterline Systems (fictional),2026-11-22,,In Progress,Low,Platform,Investigate console timeout,Engineering,2026-12-02,Adoption visibility gap,Confirm mitigation and next update date,2026-11-18</script>
+<script>
+"use strict";
+const asOf="2026-11-22";
+const sample=document.getElementById("sourceCSV").textContent;
+const $=s=>document.getElementById(s);
+let current=[];
+function parseCSV(src){
+  if(!src||src.length>1400000)throw Error("Choose a CSV smaller than 1.4MB.");
+  const all=[];let row=[],field="",quoted=false;
+  src=src.replace(/^\uFEFF/,"");
+  for(let i=0;i<src.length;i++){
+    const ch=src[i];
+    if(quoted){if(ch==='"'&&src[i+1]==='"'){field+='"';i++}else if(ch==='"'){quoted=false}else{field+=ch}}
+    else if(ch==='"'){quoted=true}
+    else if(ch===','){row.push(field.trim());field=""}
+    else if(ch==='\n'||ch==='\r'){if(ch==='\r'&&src[i+1]==='\n')i++;row.push(field.trim());if(row.some(Boolean))all.push(row);row=[];field=""}
+    else field+=ch;
+  }
+  if(quoted)throw Error("Incomplete quoted CSV cell.");
+  row.push(field.trim());if(row.some(Boolean))all.push(row);
+  if(all.length<2)throw Error("CSV needs headers and at least one record.");
+  const h=all.shift().map(s=>s.toLowerCase().replace(/[^a-z0-9]/g,""));
+  const need=["casenumber","accountname","createddate","status","priority","category","subject","sladue","nextaction"];
+  const missing=need.filter(n=>!h.includes(n));
+  if(missing.length)throw Error("Missing expected columns: "+missing.join(", ")+". Try the supplied sample.");
+  if(all.length>5000)throw Error("Limit this public demo to 5,000 synthetic or sanitized rows.");
+  return all.map((r,idx)=>{if(r.length!==h.length)throw Error("CSV width mismatch at row "+(idx+2));const o={};h.forEach((k,j)=>o[k]=r[j]);return o});
+}
+function el(tag,cls,value){const e=document.createElement(tag);if(cls)e.className=cls;if(value!==undefined)e.textContent=String(value);return e}
+function dateOK(s){return /^\d{4}-\d{2}-\d{2}$/.test(s||"")}
+function countBy(rows,k){const result={};for(const r of rows){const n=r[k]||"Unspecified";result[n]=(result[n]||0)+1}return result}
+function isOpen(r){return !["closed","resolved","cancelled"].includes((r.status||"").toLowerCase())}
+function render(rows,label){
+ const open=rows.filter(isOpen), past=open.filter(r=>dateOK(r.sladue)&&r.sladue<asOf);
+ const hi=open.filter(r=>["high","critical"].includes((r.priority||"").toLowerCase()));
+ $("dataset").textContent=label+" · "+rows.length+" record(s) · reviewed against "+asOf;
+ $("total").textContent=rows.length;$("open").textContent=open.length;$("overdue").textContent=past.length;$("high").textContent=hi.length;
+ const c=countBy(rows,"category"),max=Math.max(1,...Object.values(c));const bars=$("bars");bars.replaceChildren();
+ Object.entries(c).sort((a,b)=>b[1]-a[1]).forEach(([key,count])=>{const line=el("div","barrow");line.appendChild(el("span","",key));const track=el("div","track"),fill=el("div","fill");fill.style.width=(100*count/max)+"%";track.appendChild(fill);line.appendChild(track);line.appendChild(el("strong","",count));bars.appendChild(line)});
+ const n=$("narrative");n.replaceChildren();
+ const items=[
+   open.length+" records have open or in-progress status. Confirm owners, scope and expected next updates.",
+   past.length+" open records are past their listed sample SLA due date. Verify applicable SLA terms before calling these breaches.",
+   hi.length+" open records are tagged High or Critical; check which have customer-validated impact.",
+   "Use case IDs to confirm each customer-facing claim. A closed case alone does not prove a business result."
+ ];
+ items.forEach(s=>n.appendChild(el("li","",s)));
+ const body=$("casebody");body.replaceChildren();
+ const risky=[...open].sort((a,b)=>(a.sladue||"9999").localeCompare(b.sladue||"9999")).slice(0,10);
+ for(const r of risky){const tr=el("tr");const values=[r.casenumber,r.priority,r.category,r.subject,r.status,r.sladue,r.nextaction];values.forEach((v,i)=>{const td=el("td",i===3||i===6?"wrap-cell":"");if(i===0)td.appendChild(el("b","",v));else if(i===1){const b=el("span","tag"+(["High","Critical"].includes(v)?" danger":""),v);td.appendChild(b)}else td.textContent=v||"—";tr.appendChild(td)});body.appendChild(tr)}
+ current=rows;
+}
+function save(name,content,type){const blob=new Blob([content],{type});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1000)}
+function briefing(){
+ const rows=current,open=rows.filter(isOpen),past=open.filter(r=>dateOK(r.sladue)&&r.sladue<asOf),hi=open.filter(r=>["high","critical"].includes((r.priority||"").toLowerCase()));
+ const risks=[...open].sort((a,b)=>(a.sladue||"9999").localeCompare(b.sladue||"9999")).slice(0,10);
+ const b=["ZORA — DRAFT TECHNICAL ACCOUNT REVIEW","Demo snapshot as of "+asOf,"SOURCE: locally loaded case CSV; manual review required","", "Total cases: "+rows.length,"Open cases: "+open.length,"Open past listed SLA date: "+past.length,"Open High/Critical: "+hi.length,"","QUESTIONS TO VERIFY","- Do SLA dates and statuses match the governing support agreement?","- Which case changes have customer-confirmed business impact?","- Which action owner and next milestone are agreed?","","SOURCE-LINKED CASES"];
+ risks.forEach(r=>b.push([r.casenumber,r.priority,r.category,r.subject,r.status,r.sladue,r.nextaction].join(" | ")));
+ b.push("","This is a draft. No figures or outcomes are customer-verified. Do not present without account-owner review.","Asterline Systems is fictional; ZORA is an independent demonstration by Dale Pittman.");
+ save("zora-review-brief.txt",b.join("\n"),"text/plain;charset=utf-8");
+}
+function load(src,label){try{const rows=parseCSV(src);render(rows,label);$("error").textContent=""}catch(e){$("error").textContent=e.message}}
+$("reset").addEventListener("click",()=>load(sample,"Fictional Asterline Systems"));
+$("brief").addEventListener("click",briefing);
+$("upload").addEventListener("change",ev=>{const f=ev.target.files?.[0];if(!f)return;if(f.size>1400000){$("error").textContent="File exceeds 1.4MB demo limit.";return}const reader=new FileReader();reader.onload=()=>load(String(reader.result||""),f.name);reader.readAsText(f);ev.target.value=""});
+load(sample,"Fictional Asterline Systems");
+</script>
+</body></html>
