@@ -34,3 +34,18 @@
  .offer-card .offer-image-main,.offer-card .offer-image-alt,.offer-card.offer-holiday>img { transition:none; }
  .offer-card:hover>img { transform:none; }
 }
+
+/* A print-style rate sheet in the existing presentation well. */
+.offer-sprint .sprint-preview { container-type:inline-size; }
+.sprint-preview .sprint-rates { box-sizing:border-box; display:flex; flex-direction:column; justify-content:center;
+ padding:clamp(10px,5cqw,32px) clamp(10px,6cqw,38px); border-radius:.35rem;
+ background:radial-gradient(ellipse at 17% 0%,#314b49,#152e32 67%,#0f2328); color:#f6eedb;
+ border:1px solid #cec3a459; box-shadow:inset 0 1px #eee4c73b,0 9px 22px #0009;
+}
+.sprint-rates-title { font:500 clamp(19px,6cqw,37px)/1.1 var(--display); letter-spacing:-.035em; margin-bottom:clamp(7px,2.8cqw,17px); }
+.sprint-rates dl { margin:0; }
+.sprint-rates dl>div { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px;
+ align-items:baseline; border-top:1px solid #eee0bb40; padding:clamp(5px,1.8cqw,10px) 0;
+ font:500 clamp(9px,3.45cqw,16px)/1.18 var(--sans); }
+.sprint-rates dd { margin:0; white-space:nowrap; font-variant-numeric:tabular-nums; color:#ffe1b3; }
+.sprint-rates small { color:#f4e6cdcc; font-size:.77em; margin-left:.18em; }
