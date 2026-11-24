@@ -1,14 +1,13 @@
-@font-face{font-family:Space;src:url(/portfolio/assets/SpaceGrotesk.ttf) format("truetype");font-weight:300 700;font-display:swap}
-@font-face{font-family:Manrope;src:url(/portfolio/assets/Manrope.ttf) format("truetype");font-weight:200 800;font-display:swap}
+@import url("/assets/brand-type.css");
 :root{--black:#111;--paper:#eeece7;--signal:#ffac77;--pad:clamp(3.7rem,7vw,9rem);color-scheme:dark}
 *{box-sizing:border-box}
 html{background:var(--black);scroll-behavior:smooth}
-body.casebook{margin:0;background:var(--black);color:var(--paper);font:400 1rem/1.5 Manrope,Arial,sans-serif;overflow-x:clip}
+body.casebook{margin:0;background:var(--black);color:var(--paper);font:400 1rem/1.5 var(--brand-sans);overflow-x:clip}
 .casebook a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.3em}
 .casebook a:focus-visible,.casebook button:focus-visible,.casebook video:focus-visible{outline:3px solid #db7e3c;outline-offset:5px}
 .casebook h1,.casebook h2,.casebook h3,.casebook p,.casebook figure{margin:0}
-.casebook h1,.casebook h2,.casebook h3{font-family:Space,Arial,sans-serif;font-weight:500}
-.casebook .tag,.casebook .rail,.casebook .jump,.casebook .caption-line,.casebook .frame-label{font:500 .8rem/1.4 Space,Arial,sans-serif;letter-spacing:.115em;text-transform:uppercase}
+.casebook h1,.casebook h2,.casebook h3{font-family:var(--brand-sans);font-weight:500}
+.casebook .tag,.casebook .rail,.casebook .jump,.casebook .caption-line,.casebook .frame-label{font:500 .8rem/1.4 var(--brand-sans);letter-spacing:.115em;text-transform:uppercase}
 .casebook .tag{display:flex;align-items:center;gap:1em}
 .casebook .tag::before{content:"";width:1.8em;height:2px;background:currentColor}
 .rail{position:fixed;z-index:10;left:0;top:46%;writing-mode:vertical-rl;transform:rotate(180deg);padding:.9rem .55rem;background:#151515ed;color:#e8e6e1!important;text-decoration:none;box-shadow:0 0 0 1px #aaa5}
@@ -40,11 +39,11 @@ body.casebook{margin:0;background:var(--black);color:var(--paper);font:400 1rem/
 .body-copy p{font-size:clamp(1.05rem,1.45vw,1.43rem);line-height:1.55;color:#222}.body-copy p+p{margin-top:1em}
 .contact-sheet{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.45rem,1.1vw,1.2rem);margin-top:clamp(2.3rem,4vw,5rem)}
 .contact-sheet img{width:100%;height:auto;display:block;background:#111}
-.contact-sheet figcaption{color:#383734;font:500 .88rem/1.35 Space,Arial,sans-serif}
+.contact-sheet figcaption{color:#383734;font:500 .88rem/1.35 var(--brand-sans)}
 .screening{background:#111;padding-bottom:clamp(4rem,6vw,6rem)}
 .screening video{width:100%;display:block;max-height:85svh;background:#111;aspect-ratio:16/9;border:1px solid #393938}
 .screening .section-label,.proof .section-label{justify-content:space-between;flex-wrap:wrap}
-.timing{color:#aaa9a5;font:400 .84rem/1.4 Space,Arial,sans-serif}
+.timing{color:#aaa9a5;font:400 .84rem/1.4 var(--brand-sans)}
 .closing{background:#e5e2da;color:#171717;min-height:68svh;display:grid;align-content:center;gap:2rem}
 .closing .credit{font-size:clamp(1.16rem,2vw,2.3rem);max-width:38em;line-height:1.39;letter-spacing:-.03em}
 .closing .end-links{display:flex;gap:.75rem 2.4rem;flex-wrap:wrap;border-top:1px solid #97968f;padding-top:1.3rem;margin-top:1rem;align-items:center}
